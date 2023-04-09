@@ -4,10 +4,7 @@ import css from 'components/Modal/Modal.module.css';
 
 
 export default function Modal ({toggleModal, largeImage}) {
-   PropTypes = {
-    toggleModal: PropTypes.func.isRequired,
-    largeImage: PropTypes.string.isRequired,
-  };
+ 
 
   useEffect(() => {
     const keyDown = e => e.keyCode === 'Esc' && toggleModal();
@@ -32,3 +29,8 @@ export default function Modal ({toggleModal, largeImage}) {
     );
   
 }
+
+  Modal.propTypes = {
+    toggleModal: PropTypes.func.isRequired,
+    largeImage: PropTypes.string.isRequired,
+  };

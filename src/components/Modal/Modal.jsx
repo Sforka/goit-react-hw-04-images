@@ -7,7 +7,7 @@ export default function Modal ({toggleModal, largeImage}) {
  
 
   useEffect(() => {
-    const keyDown = e => e.keyCode === 'Esc' && toggleModal();
+    const keyDown = e => e.key === 'Escape' && toggleModal();
     window.addEventListener('keydown', keyDown);
     return (() => {window.removeEventListener('keydown', keyDown);}
     )
